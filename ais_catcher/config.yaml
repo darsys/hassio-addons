@@ -1,6 +1,6 @@
 name: "AIS Catcher"
 description: "AIS-catcher: A multi-platform AIS Receiver"
-version: "0.1.18"
+version: "0.1.19"
 slug: "ais_catcher"
 init: false
 usb: true

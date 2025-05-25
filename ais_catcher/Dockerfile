@@ -32,6 +32,7 @@ RUN apt-get install librtlsdr0 libairspy0 libhackrf0 libairspyhf1 libzmq5 libsox
 
 COPY --from=build /usr/local/bin/AIS-catcher /usr/local/bin/AIS-catcher
 COPY ./run.sh /
+RUN chmod +x /run.sh 
 
 # Build arguments
 ARG BUILD_ARCH
