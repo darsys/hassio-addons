@@ -8,7 +8,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 This repository contains the following add-ons
 
-### [Example add-on](./example)
+### [AIS Catcher Addon](./ais_catcher)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -16,9 +16,7 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-_Example add-on to use as a blueprint for new add-ons._
-
-<!--
+_<!--
 
 Notes to developers after forking or using the github template feature:
 - While developing comment out the 'image' key from 'example/config.yaml' to make the supervisor build the addon

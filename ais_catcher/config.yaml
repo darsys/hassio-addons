@@ -1,0 +1,27 @@
+name: "AIS Catcher"
+description: "AIS-catcher: A multi-platform AIS Receiver"
+version: "0.1.18"
+slug: "ais_catcher"
+init: false
+usb: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ingress: true
+ingress_port: 8100
+ports:
+  8100/tcp: 8100
+map:
+  - addon_config:rw
+options:
+  default_lease: 86400
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4
+  ntp: []
+  domain: null
+  hosts: []
+  max_lease: 1728
