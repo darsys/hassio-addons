@@ -9,9 +9,3 @@ See Home Assistant Add-on documentation: <https://developers.home-assistant.io/d
 This repository contains the following add-ons
 
 ### [AIS Catcher Addon](./ais_catcher)
-
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
