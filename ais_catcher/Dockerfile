@@ -6,22 +6,19 @@ FROM debian:bullseye-slim AS build
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install git make gcc g++ cmake pkg-config -y
+RUN apt-get install git make gcc g++ cmake pkg-config libsqlite3-dev -y
 RUN apt-get install librtlsdr-dev libairspy-dev libhackrf-dev libairspyhf-dev libzmq3-dev libsoxr-dev libcurl4-openssl-dev zlib1g-dev libpq-dev -y
 
-RUN git clone https://github.com/jvde-github/AIS-catcher.git /root/AIS-catcher
-
-# COPY . /root/AIS-catcher
-
+RUN git clone https://github.com/jvde-github/AIS-catcher.git /root/AIS-catcher --depth 1
 RUN cd /root/AIS-catcher; mkdir build; cd build; cmake ..; make; make install
 
 # -------------------------
 # The application container
 # -------------------------
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.8.3
-# FROM ${BUILD_FROM}
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:9.3.0
+#FROM ${BUILD_FROM}
 
-FROM ghcr.io/hassio-addons/debian-base:7.8.3
+FROM ghcr.io/hassio-addons/debian-base:9.3.0
 # hadolint ignore=DL3006
 
 
